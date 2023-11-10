@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+   <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="weather.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="body-container">
+        <nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand"><i class="fa-solid fa-umbrella"></i>Weather4U</a>
+    <form class="d-flex search-form-element" role="search" id="search-form-element">
+      <input class="form-control me-2 search-form-element" type="search" placeholder="Enter a city" aria-label="Search" id="search-input">
+      <button class="btn btn-outline-success search-btn" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+      <h1 class="city-h1" id="city">London</h1>
+      <div class="temp-sect">
+      <span class="temp-display" id="temp-display">20
+       </span> <span class="units"> <a href="#" class="cel-link" id="cel-link">°C</a> | <a href="#" class="fah-link" id="fah-link">°F</a></span>
+       </div>
+    
+      <p class="day-time">Monday 9:30am</p>
+      <h3>Weekly Forecast</h3>
+      <!-- CARDS -->
+     <div class="row">
+        <div class="col">
+          <div class="card">
+            <i class="fa-solid fa-cloud-showers-heavy rainy-cloud card-icon"></i>
+            <div class="card-body">
+              <h5 class="card-title">Mon</h5>
+              <p class="conditions">Light Showers</p>
+              <p class="card-text">20 °F | 10 °F <br /></p>
+              <p class="precip-rate">Precipitation 80%</p>
+              <a href="#" class="btn btn-primary">See Hourly Forecast </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <i class="fa-solid fa-sun sun card-icon"></i>
+            <div class="card-body">
+              <h5 class="card-title">Tue</h5>
+              <p class="conditions">Sunny, Clear Skies</p>
+              <p class="card-text">90 °F | 82 °F <br /></p>
+              <p class="precip-rate">Precipitation 0%</p>
+              <a href="#" class="btn btn-primary">See Hourly Forecast</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <i class="fa-solid fa-cloud cloud card-icon"></i>
+            <div class="card-body">
+              <h5 class="card-title">Wed</h5>
+              <p class="conditions">Mostly Cloudy</p>
+              <p class="card-text">50 °F | 45 °F <br /></p>
+              <p class="precip-rate">Precipitation 40%</p>
+              <a href="#" class="btn btn-primary">See Hourly Forecast</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <i class="fa-solid fa-cloud-bolt cloud-bolt card-icon"></i>
+            <div class="card-body">
+              <h5 class="card-title">Thu</h5>
+              <p class="conditions">Heavy Rain, Lightning</p>
+              <p class="card-text">20 °F | 15 °F <br /></p>
+              <p class="precip-rate">Precipitation 90%</p>
+              <a href="#" class="btn btn-primary">See Hourly Forecast</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <i class="fa-solid fa-cloud-showers-heavy rainy-cloud card-icon"></i>
+            <div class="card-body">
+              <h5 class="card-title">Fri</h5>
+              <p class="conditions">Light Showers</p>
+              <p class="card-text">32 °F | 25 °F <br /></p>
+              <p class="precip-rate">Precipitation 80%</p>
+              <a href="#" class="btn btn-primary">See Hourly Forecast</a>
+            </div>
+          </div>
+        </div>
+        <div class="social-sect">
+            <h3 class="social-heading">Stalk Us On Social Media</h3>
+            <ul class="list-social">
+                <li class="social-links">
+                    <i class="fa-brands fa-facebook-f facebook" style="color: #ffffff;"></i>Facebook
+                </li>
+                <li class="social-links">
+                   <i class="fa-brands fa-instagram instagram" style="color: #ffffff;"></i> Instagram
+                </li>
+                <li class="social-links">
+                    <i class="fa-brands fa-tiktok tiktok" style="color: #ffffff;"></i>TikTok
+                </li>
+            </ul>
+        </div>
+      </div>
+    <!-- FONT AWESOME ICONS -->
+    <script
+      src="https://kit.fontawesome.com/a831075c96.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="weather.js"></script>
+  </body>
+</html>

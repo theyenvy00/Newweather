@@ -1,0 +1,117 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url(images/darkbluesky.jpg);
+  color: #fff;
+}
+
+/* SOCIAL LINKS */
+.list-social {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* TEMP TOP OF THE PAGE */
+.temp-sect {
+  margin: 0;
+  padding-top: 10px;
+  font-size: 30px;
+  text-align: center;
+  font-size: 30px;
+  opacity: 80%;
+  margin-top: 0px;
+}
+
+.cel-link,
+.fah-link {
+  text-decoration: underline;
+  color: #f59700;
+}
+
+/* WEEKLY FORECAST HEADING */
+h3 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 80px;
+}
+
+.city-h1 {
+  font-size: 80px;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: 600;
+}
+
+.day-time {
+  text-align: center;
+}
+
+.card {
+  opacity: 80%;
+  margin: 20px;
+  margin-top: 50px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.fa-temperature-three-quarters {
+  margin-right: 10px;
+}
+
+.card-icon {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 30px;
+}
+
+.search-btn {
+  background-color: #2c62c2;
+  color: #fff;
+  border: none;
+}
+/* SEARCH BUTTON HOVER STATE */
+.search-btn:hover {
+  background-color: #295cb5;
+}
+
+.navbar {
+  opacity: 80%;
+}
+
+.social-sect {
+  background-color: #013354;
+  margin-top: 70px;
+}
+
+.social-heading {
+  font-weight: 600;
+  text-align: center;
+}
+
+.facebook {
+  margin: 10px;
+}
+
+.instagram {
+  margin: 10px;
+}
+
+.tiktok {
+  margin: 10px;
+}
+
+.social-links {
+  transition: all ease-in 200ms;
+  font-weight: 600;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+.social-links:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
