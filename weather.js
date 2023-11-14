@@ -81,6 +81,12 @@ let celsius = document.querySelector("#cel-link");
 celsius.addEventListener("click", convertToCelsius);
 /* CELSIUS AND FAHRENHEIT LINKS */
 
+function searchCity(city) {
+  let apiKey = "8407bt42faf49cd402f3f3c8fo232de7";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=8407bt42faf49cd402f3f3c8fo232de7&units=metric`;
+  console.log(apiUrl);
+}
+
 function handleSearchSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
