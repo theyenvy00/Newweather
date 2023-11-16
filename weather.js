@@ -57,10 +57,6 @@ if (weather[city] !== undefined) {
   );
 }
 
-function displayWeather(response) {
-  console.log(response.data);
-}
-
 /* CELSIUS AND FAHRENHEIT LINKS */
 function convertToFahrenheit(event) {
   event.preventDefault();
@@ -81,9 +77,19 @@ let celsius = document.querySelector("#cel-link");
 celsius.addEventListener("click", convertToCelsius);
 /* CELSIUS AND FAHRENHEIT LINKS */
 
+function displayWeather(response) {
+  console.log(response.data.temperature.current);
+  let tempElement = document.querySelector("#temp-display");
+  let temperatureDisplay = response.data.temperature.current;
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = response.data.city;
+  tempElement.innerHTML = Math.round(temperatureDisplay);
+}
+
 function searchCity(city) {
   let apiKey = "8407bt42faf49cd402f3f3c8fo232de7";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=8407bt42faf49cd402f3f3c8fo232de7&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeather);
 }
 
 function handleSearchSubmit(event) {
