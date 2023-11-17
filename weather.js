@@ -1,23 +1,3 @@
-/* CURRENT DAY AND TIME */
-let time = document.querySelector(".day-time");
-let now = new Date();
-let year = now.getFullYear();
-let hours = now.getHours();
-let mins = now.getMinutes();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-
-time.innerHTML = `${day} ${hours}:${mins}`;
-/* CURRENT DAY AND TIME */
-
 let weather = {
   paris: {
     temp: 19.7,
@@ -78,12 +58,40 @@ celsius.addEventListener("click", convertToCelsius);
 /* CELSIUS AND FAHRENHEIT LINKS */
 
 function displayWeather(response) {
-  console.log(response.data.temperature.current);
   let tempElement = document.querySelector("#temp-display");
   let temperatureDisplay = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#todays-conditions");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind-speed");
+  let feelslikeElememt = document.querySelector("#feels-like");
+  let timeElement = document.querySelector("#day-time");
+  let date = new Date(response.data.time * 1000);
+
+  console.log(response.data);
+
   cityElement.innerHTML = response.data.city;
   tempElement.innerHTML = Math.round(temperatureDisplay);
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  feelslikeElememt.innerHTML = `${response.data.temperature.feels_like}°C`;
+  timeElement.innerHTML = formatDate(date);
+}
+
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
