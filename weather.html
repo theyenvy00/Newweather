@@ -21,6 +21,7 @@
   </head>
   <body>
     <div class="body-container">
+    
         <nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand"><i class="fa-solid fa-umbrella"></i>Weather4U</a>
@@ -30,19 +31,23 @@
     </form>
   </div>
 </nav>
+  <div class="bg-container">
       <h1 class="city-h1" id="city">London</h1>
+      <div class="icon-container"><img class="weather-app-icon" src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/mist-day.png" alt="weather icon"></div>
       <div class="temp-sect">
       <span class="temp-display" id="temp-display">20
        </span> <span class="units"> <a href="#" class="cel-link" id="cel-link">°C</a> | <a href="#" class="fah-link" id="fah-link">°F</a></span>
-       </div>
-    
-      <p class="day-time" id="day-time"></p>
+       <p class="day-time" id="day-time"></p>
+      </div>
+
+      <div class="stat-sect">
       <p class="todays-conditions" id="todays-conditions"></p>
       <p class="weather-stats">
         Wind: <strong id="wind-speed">23</strong> | Humidity: <strong id="humidity">66%</strong> | Feels like: <strong id="feels-like">7°C</strong>
       </p>
-      <h3>Weekly Forecast</h3>
-      <!-- CARDS -->
+      </div>
+      </div>
+      <!--<h3>Weekly Forecast</h3>
      <div class="row">
         <div class="col">
           <div class="card">
@@ -122,7 +127,8 @@
                 </li>
             </ul>
         </div>
-      </div>
+      </div> -->
+      
     <!-- FONT AWESOME ICONS -->
     <script
       src="https://kit.fontawesome.com/a831075c96.js"

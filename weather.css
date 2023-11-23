@@ -38,7 +38,7 @@ h3 {
 .city-h1 {
   font-size: 80px;
   margin: 0;
-  color: #fff;
+  color: #262626;
   text-align: center;
   margin-top: 40px;
   font-weight: 600;
@@ -47,6 +47,7 @@ h3 {
 .day-time {
   text-align: center;
   font-size: 18px;
+  color: #262626;
 }
 
 .card {
@@ -118,8 +119,11 @@ h3 {
 }
 .todays-conditions {
   text-align: center;
-  font-size: 14px;
+  font-size: 20px;
   margin-bottom: 0px;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: #434242;
 }
 
 .wind {
@@ -129,4 +133,30 @@ h3 {
 }
 .weather-stats {
   text-align: center;
+  color: #434242;
+}
+
+.stat-sect {
+  margin: 40px;
+}
+
+.bg-container {
+  background-color: #fff;
+  opacity: 80%;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+.temp-display {
+  color: #434242;
+}
+.icon-container {
+  text-align: center;
+}
+
+.weather-app-icon {
+  width: 80px;
 }

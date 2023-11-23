@@ -25,13 +25,11 @@ function displayWeather(response) {
   let timeElement = document.querySelector("#day-time");
   let date = new Date(response.data.time * 1000);
 
-  console.log(response.data);
-
   cityElement.innerHTML = response.data.city;
   tempElement.innerHTML = Math.round(temperatureDisplay);
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windElement.innerHTML = `${response.data.wind.speed}`;
+  windElement.innerHTML = `${response.data.wind.speed}km/h`;
   feelslikeElement.innerHTML = `${response.data.temperature.feels_like}°C`;
   timeElement.innerHTML = formatDate(date);
 }
@@ -48,6 +46,10 @@ function formatDate(date) {
     "Saturday",
   ];
   let day = days[date.getDay()];
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
   return `${day} ${hours}:${minutes}`;
 }
 function searchCity(city) {
