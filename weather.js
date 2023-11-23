@@ -24,6 +24,8 @@ function displayWeather(response) {
   let feelslikeElement = document.querySelector("#feels-like");
   let timeElement = document.querySelector("#day-time");
   let date = new Date(response.data.time * 1000);
+  let icon = document.querySelector(".weather-app-icon");
+  icon.setAttribute("src", `${response.data.condition.icon_url}`);
 
   cityElement.innerHTML = response.data.city;
   tempElement.innerHTML = Math.round(temperatureDisplay);
