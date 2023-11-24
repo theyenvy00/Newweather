@@ -141,7 +141,7 @@ h3 {
 }
 
 .bg-container {
-  background-color: #fff;
+  background-color: #c4dfff;
   opacity: 80%;
   padding: 20px;
   border-radius: 20px;
@@ -159,4 +159,14 @@ h3 {
 
 .weather-app-icon {
   width: 80px;
+}
+
+.gitlink {
+  text-align: center;
+  color: #fff;
+}
+.programmer-info {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
 }
