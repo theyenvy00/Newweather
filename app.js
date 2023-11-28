@@ -14,6 +14,7 @@ fahrenheit.addEventListener("click", convertToFahrenheit);
 let celsius = document.querySelector("#cel-link");
 celsius.addEventListener("click", convertToCelsius);
 /* CELSIUS AND FAHRENHEIT LINKS */
+
 function displayWeather(response) {
   let tempElement = document.querySelector("#temp-display");
   let temperatureDisplay = response.data.temperature.current;
@@ -34,6 +35,8 @@ function displayWeather(response) {
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   feelslikeElement.innerHTML = `${response.data.temperature.feels_like}°C`;
   timeElement.innerHTML = formatDate(date);
+
+  getForecast(response.data.city);
 }
 function formatDate(date) {
   let minutes = date.getMinutes();
@@ -67,7 +70,8 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
   let days = ["Tue", "wed", "Thur", "Fri", "Sat"];
   let forecastHtml = `<div class="row">`;
   days.forEach(function (day) {
@@ -91,7 +95,12 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHtml;
 }
 
+function getForecast(city) {
+  let apiKey = "8407bt42faf49cd402f3f3c8fo232de7";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
 let searchFormElement = document.querySelector("#search-form-element");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 searchCity("London");
-displayForecast();
