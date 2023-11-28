@@ -15,49 +15,67 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-   <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div class="body-container">
-    
-        <nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand"><i class="fa-solid fa-umbrella"></i>Weather4U</a>
-    <form class="d-flex search-form-element" role="search" id="search-form-element">
-      <input class="form-control me-2 search-form-element" type="search" placeholder="Enter a city" aria-label="Search" id="search-input">
-      <button class="btn btn-outline-success search-btn" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-  <div class="bg-container">
-      <h1 class="city-h1" id="city">London</h1>
-      <div class="icon-container"><img class="weather-app-icon" src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/mist-day.png" alt="weather icon"></div>
-      <div class="temp-sect">
-      <span class="temp-display" id="temp-display">20
-       </span> <span class="units"> <a href="#" class="cel-link" id="cel-link">°C</a> | <a href="#" class="fah-link" id="fah-link">°F</a></span>
-       <p class="day-time" id="day-time"></p>
-      </div>
-
-      <div class="stat-sect">
-      <p class="todays-conditions" id="todays-conditions"></p>
-      <p class="weather-stats">
-        Wind: <strong id="wind-speed">23</strong> | Humidity: <strong id="humidity">66%</strong> | Feels like: <strong id="feels-like">7°C</strong>
-      </p>
-      </div>
-
-      <div class="weather-forecast">
-        <div class="row">
-          <div class="col-2">
-            Thu
-            <img src="" alt="">
-          </div>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand"
+            ><i class="fa-solid fa-umbrella"></i>Weather4U</a
+          >
+          <form
+            class="d-flex search-form-element"
+            role="search"
+            id="search-form-element"
+          >
+            <input
+              class="form-control me-2 search-form-element"
+              type="search"
+              placeholder="Enter a city"
+              aria-label="Search"
+              id="search-input"
+            />
+            <button class="btn btn-outline-success search-btn" type="submit">
+              Search
+            </button>
+          </form>
         </div>
-      </div>
-      </div>
+      </nav>
+      <div class="bg-container">
+        <h1 class="city-h1" id="city">London</h1>
+        <div class="icon-container">
+          <img
+            class="weather-app-icon"
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/mist-day.png"
+            alt="weather icon"
+          />
+        </div>
+        <div class="temp-sect">
+          <span class="temp-display" id="temp-display">20 </span>
+          <span class="units">
+            <a href="#" class="cel-link" id="cel-link">°C</a> |
+            <a href="#" class="fah-link" id="fah-link">°F</a></span
+          >
+          <p class="day-time" id="day-time"></p>
+        </div>
 
-      <!--<h3>Weekly Forecast</h3>
+        <div class="stat-sect">
+          <p class="todays-conditions" id="todays-conditions"></p>
+          <p class="weather-stats">
+            Wind: <strong id="wind-speed">23</strong> | Humidity:
+            <strong id="humidity">66%</strong> | Feels like:
+            <strong id="feels-like">7°C</strong>
+          </p>
+        </div>
+
+        <div class="weather-forecast" id="forecast"></div>
+      </div>
+    </div>
+
+    <!--<h3>Weekly Forecast</h3>
      <div class="row">
         <div class="col">
           <div class="card">
@@ -138,10 +156,19 @@
             </ul>
         </div>
       </div> -->
-      
-     <p class="programmer-info">
-      This project was coded by <a href="https://github.com/theyenvy00" target="_blank">Michaela Lewis</a>, is open sourced on <a href="https://github.com/theyenvy00/Newweather" target="_blank">Github</a> and hosted on <a href="https://dashing-dusk-2ac8f1.netlify.app/?" target="_blank">Netlify</a>
-     </p>
+
+    <p class="programmer-info">
+      This project was coded by
+      <a href="https://github.com/theyenvy00" target="_blank">Michaela Lewis</a
+      >, is open sourced on
+      <a href="https://github.com/theyenvy00/Newweather" target="_blank"
+        >Github</a
+      >
+      and hosted on
+      <a href="https://dashing-dusk-2ac8f1.netlify.app/?" target="_blank"
+        >Netlify</a
+      >
+    </p>
     <!-- FONT AWESOME ICONS -->
     <script
       src="https://kit.fontawesome.com/a831075c96.js"

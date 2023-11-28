@@ -66,6 +66,34 @@ function handleSearchSubmit(event) {
   cityElement.innerHTML = searchInput.value;
   searchCity(searchInput.value);
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Tue", "wed", "Thur", "Fri", "Sat"];
+  let forecastHtml = "";
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+      <div class="row">
+      <div class="col-2">
+      <div class="weather-forecast-date">
+      ${day}
+      </div>
+      <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png" alt="weather-forecast-icon" width="36"><div class="weather-forecast-temp">
+      <span class="weather-forecast-temp-max">18°</span>
+      <span class="weather-forecast-temp-min">12°</span>
+      </div>
+      </div>
+      </div>
+      `;
+
+    document.getElementById("forecast").style.alignItems = "flex-start";
+    forecastElement.innerHTML = forecastHtml;
+  });
+}
+
 let searchFormElement = document.querySelector("#search-form-element");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 searchCity("London");
+displayForecast();
