@@ -68,14 +68,12 @@ function handleSearchSubmit(event) {
 }
 
 function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
-  let days = ["Tue", "wed", "Thur", "Fri", "Sat"];
-  let forecastHtml = "";
+  let days = ["Tue", "wed", "Thur", "Fri", "Sat", "Sun"];
+  let forecastHtml = `<div class="row">`;
   days.forEach(function (day) {
     forecastHtml =
       forecastHtml +
       `
-      <div class="row">
       <div class="col-2">
       <div class="weather-forecast-date">
       ${day}
@@ -85,12 +83,12 @@ function displayForecast() {
       <span class="weather-forecast-temp-min">12°</span>
       </div>
       </div>
-      </div>
       `;
-
-    document.getElementById("forecast").style.alignItems = "flex-start";
-    forecastElement.innerHTML = forecastHtml;
   });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastHtml = forecastHtml + `</div>`;
+  forecastElement.innerHTML = forecastHtml;
 }
 
 let searchFormElement = document.querySelector("#search-form-element");
